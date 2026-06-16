@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kebab Sultan</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+nav{
+background:#111827;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:bold;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#f59e0b;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:80px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#f59e0b;
+padding:15px 35px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.menu-section{
+padding:70px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:white;
+width:300px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+}
+
+.price{
+color:#dc2626;
+font-size:24px;
+font-weight:bold;
+padding-bottom:20px;
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+🌯 Kebab Sultan
+</div>
+
+<div class="menu">
+<a href="/">Home</a>
+<a href="/profile">Profile</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Kebab Sultan</h1>
+
+<p>
+Kebab Premium Dengan Harga Terjangkau
+</p>
+
+<a href="/profile" class="btn">
+Lihat Profile
+</a>
+
+</div>
+
+</section>
+
+<section class="menu-section">
+
+<h2>Menu Terlaris</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600">
+<h3>Kebab Original</h3>
+<div class="price">Rp10.000</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600">
+<h3>Kebab Jumbo</h3>
+<div class="price">Rp15.000</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600">
+<h3>Kebab Mozzarella</h3>
+<div class="price">Rp20.000</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

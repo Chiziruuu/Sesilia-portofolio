@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - Kebab Sultan</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#e5e7eb;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 50px;
+    background:rgba(15,23,42,0.85);
+    backdrop-filter:blur(12px);
+    position:sticky;
+    top:0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    z-index:100;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:800;
+    color:#38bdf8;
+}
+
+.menu a{
+    color:#e5e7eb;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+    font-weight:500;
+}
+
+.menu a:hover{
+    color:#38bdf8;
+}
+
+/* SECTION */
+section{
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+/* HERO */
+.hero{
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.04);
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+.hero img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    filter:brightness(0.85);
+    transition:0.5s;
+}
+
+.hero:hover img{
+    transform:scale(1.03);
+}
+
+.hero-text{
+    padding:20px;
+}
+
+.hero-text h1{
+    font-size:32px;
+    color:#fff;
+}
+
+.hero-text p{
+    margin-top:10px;
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:18px;
+    border-radius:15px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
+    background:rgba(56,189,248,0.08);
+}
+
+/* JUDUL */
+h2{
+    margin-top:40px;
+    font-size:22px;
+    color:#fff;
+}
+
+/* TESTIMONI */
+.chat-box{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.chat{
+    display:flex;
+}
+
+.chat.left{
+    justify-content:flex-start;
+}
+
+.chat.right{
+    justify-content:flex-end;
+}
+
+.bubble{
+    max-width:75%;
+    padding:14px 16px;
+    border-radius:16px;
+    font-size:14px;
+    line-height:1.5;
+    transition:0.3s;
+}
+
+.chat.left .bubble{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    border-bottom-left-radius:5px;
+}
+
+.chat.right .bubble{
+    background:#38bdf8;
+    color:#0f172a;
+    border-bottom-right-radius:5px;
+}
+
+.bubble span{
+    display:block;
+    margin-top:8px;
+    font-size:11px;
+    opacity:0.7;
+}
+
+.bubble:hover{
+    transform:translateY(-3px);
+}
+
+/* INFO */
+.info{
+    margin-top:10px;
+    padding:12px 15px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.info:hover{
+    border-color:#38bdf8;
+    transform:translateX(5px);
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .hero img{
+        height:220px;
+    }
+
+    .hero-text h1{
+        font-size:24px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">🌯 Kebab Sultan</div>
+
+    <div class="menu">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+    </div>
+</nav>
+
+<section>
+
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200">
+
+        <div class="hero-text">
+            <h1>Kebab Sultan</h1>
+
+            <p>
+                Brand kuliner modern dengan fokus pada rasa premium,
+                pelayanan cepat, dan pengalaman pelanggan terbaik.
+            </p>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="card">🌯 Premium Quality</div>
+        <div class="card">🚀 Fast Delivery</div>
+        <div class="card">💳 Cashless Payment</div>
+        <div class="card">⭐ Trusted Brand</div>
+    </div>
+
+    <h2>💬 Testimoni Pelanggan</h2>
+
+    <div class="chat-box">
+
+        <div class="chat left">
+            <div class="bubble">
+                "Kebabnya enak banget, juicy dan nggak pelit isian."
+                <span>- Andi</span>
+            </div>
+        </div>
+
+        <div class="chat right">
+            <div class="bubble">
+                "Delivery cepat, masih hangat sampai rumah. Mantap."
+                <span>- Siti</span>
+            </div>
+        </div>
+
+        <div class="chat left">
+            <div class="bubble">
+                "Harga murah tapi kualitas premium, worth it."
+                <span>- Riko</span>
+            </div>
+        </div>
+
+        <div class="chat right">
+            <div class="bubble">
+                "Pelayanan ramah, rasa konsisten, saya langganan."
+                <span>- Dimas</span>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>📍 Informasi Usaha</h2>
+
+    <div class="info">Lokasi: Pekanbaru, Riau</div>
+    <div class="info">Kontak: 0812-3456-7890</div>
+    <div class="info">Jam Operasional: 09.00 - 22.00 WIB</div>
+    <div class="info">Layanan: Delivery & Take Away</div>
+
+</section>
+
+</body>
+</html>
